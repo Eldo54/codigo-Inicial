@@ -1,0 +1,58 @@
+/*copywrite.eldodev
+  &copy; eldo.dev - Todos os direitos reservados!
+*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ffffff;
+  background-color: rgb(4, 4, 39);
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__link {
+  position: relative;
+  display: block;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.navigation__link:hover {
+  color: #ffffff;
+  -webkit-text-stroke: 1px #212121;
+  transition: 0.25s;
+}
+.navigation__link:hover::before {
+  transform: translate(12px, -12px);
+  color: red;
+  -webkit-text-stroke: 1px #212121;
+}
+.navigation__link:hover::after {
+  transform: translate(24px, -24px);
+  color: yellow;
+  -webkit-text-stroke: 1px #212121;
+}
+.navigation__link::before, .navigation__link::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px transparent;
+}
